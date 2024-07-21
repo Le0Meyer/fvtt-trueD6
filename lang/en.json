@@ -10,33 +10,33 @@
     "Price": "Price",
     "Attributes": {
       "Str": {
-        "long": "Strength",
-        "abbr": "str",
-        "explanation": "melee attacks, athletics, break, overwhelm, lift, push",
+        "long": "Vigor",
+        "abbr": "vig",
+        "explanation": "athletics, melee attacks, power, stamina, strength",
         "order": "1"
       },
       "Dex": {
         "long": "Dexterity",
         "abbr": "dex",
-        "explanation": "ranged attacks, acrobatics, coordination, handiness",
+        "explanation": "agility, deftness, finesse, ranged attacks, reflexes",
         "order": "2"
       },
       "Con": {
-        "long": "Constitution",
+        "long": "Intellect",
         "abbr": "con",
-        "explanation": "resistance, metabolism, endurance, stamina, health",
+        "explanation": "understanding, logic, oratory, problem-solving, crafting",
         "order": "3"
       },
       "Int": {
-        "long": "Intelligence",
+        "long": "Willpower",
         "abbr": "int",
-        "explanation": "arcane magic, logic, education, investigation, tracking",
+        "explanation": "mental fortitude, leadership, emotional resilience, motivation",
         "order": "4"
       },
       "Wis": {
-        "long": "Wisdom",
+        "long": "Awareness",
         "abbr": "wis",
-        "explanation": "divine magic, religion, empathy, intuition, discernment",
+        "explanation": "perception, investigation, | observation, intuition ",
         "order": "5"
       },
       "Cha": {
