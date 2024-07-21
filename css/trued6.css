@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* Global styles */
+body,
+button,
+#tooltip {
+  font-family: "Germania One", Garamond;
+  font-size: 16px;
+}
+
+.rollable:hover, .trued6 .usable:hover, .rollable:focus, .trued6 .usable:focus {
+  color: #000;
+  text-shadow: 0 0 10px blue;
+  cursor: pointer;
+}
+.rollable:hover.advantage, .trued6 .usable:hover.advantage, .rollable:focus.advantage, .trued6 .usable:focus.advantage {
+  text-shadow: 0 0 10px green;
+}
+.rollable:hover.disadvantage, .trued6 .usable:hover.disadvantage, .rollable:focus.disadvantage, .trued6 .usable:focus.disadvantage {
+  text-shadow: 0 0 10px red;
+}
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2/span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 10px 0;
+  padding: 0;
+}
+.grid.no-margin,
+.grid-2col.no-margin {
+  margin: 0;
+}
+.grid.no-margin > *,
+.grid-2col.no-margin > * {
+  padding: 10px 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.grid.gap5,
+.grid-2col.gap5 {
+  gap: 5px;
+}
+.grid-3col {
+  grid-column: span 3/span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4col {
+  grid-column: span 4/span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-5col {
+  grid-column: span 5/span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-6col {
+  grid-column: span 6/span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-7col {
+  grid-column: span 7/span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-8col {
+  grid-column: span 8/span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-9col {
+  grid-column: span 9/span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-10col {
+  grid-column: span 10/span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-11col {
+  grid-column: span 11/span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-12col {
+  grid-column: span 12/span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-start-2 {
+  grid-column-start: 2;
+}
+
+.grid-start-3 {
+  grid-column-start: 3;
+}
+
+.grid-start-4 {
+  grid-column-start: 4;
+}
+
+.grid-start-5 {
+  grid-column-start: 5;
+}
+
+.grid-start-6 {
+  grid-column-start: 6;
+}
+
+.grid-start-7 {
+  grid-column-start: 7;
+}
+
+.grid-start-8 {
+  grid-column-start: 8;
+}
+
+.grid-start-9 {
+  grid-column-start: 9;
+}
+
+.grid-start-10 {
+  grid-column-start: 10;
+}
+
+.grid-start-11 {
+  grid-column-start: 11;
+}
+
+.grid-start-12 {
+  grid-column-start: 12;
+}
+
+.grid-span-2 {
+  grid-column-end: span 2;
+}
+
+.grid-span-3 {
+  grid-column-end: span 3;
+}
+
+.grid-span-4 {
+  grid-column-end: span 4;
+}
+
+.grid-span-5 {
+  grid-column-end: span 5;
+}
+
+.grid-span-6 {
+  grid-column-end: span 6;
+}
+
+.grid-span-7 {
+  grid-column-end: span 7;
+}
+
+.grid-span-8 {
+  grid-column-end: span 8;
+}
+
+.grid-span-9 {
+  grid-column-end: span 9;
+}
+
+.grid-span-10 {
+  grid-column-end: span 10;
+}
+
+.grid-span-11 {
+  grid-column-end: span 11;
+}
+
+.grid-span-12 {
+  grid-column-end: span 12;
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flex-group-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flexshrink {
+  flex: 0;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flexlarge {
+  flex: 2;
+}
+
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.align-center, .trued6 .dice-roll .dice-tooltip {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Styles limited to trued6 sheets */
+.trued6 {
+  /* ----------------------------------------- */
+  /*  Items Lists                              */
+  /* ----------------------------------------- */
+  /* Example style for Trued6 (can be removed if not needed) */
+}
+.trued6 .chat-item-description .description {
+  padding: 0px 5px;
+  text-align: justify;
+}
+.trued6 .chat-item-description .characteristics {
+  float: left;
+  display: flex;
+}
+.trued6 .chat-item-description .characteristics img {
+  width: 120px;
+}
+.trued6 .chat-item-description .characteristics span {
+  flex: 1;
+}
+.trued6 .item-form {
+  font-family: "Roboto", sans-serif;
+}
+.trued6 .sheet-header .profile-img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 10px;
+  flex: 0;
+}
+.trued6 form.npc,
+.trued6 form.player {
+  min-width: 580px;
+}
+.trued6 .sheet-header {
+  grid-area: header;
+  grid-column: 1/1;
+  font-weight: bold;
+  flex: 0;
+}
+.trued6 .sheet-header .header-fields {
+  flex: 1;
+}
+.trued6 .sheet-header .first-column {
+  width: 120px;
+  flex: 0.25;
+  margin-right: 5px;
+}
+.trued6 .border, .trued6 .chat-item-description {
+  display: grid;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.trued6 .border > *, .trued6 .chat-item-description > * {
+  align-items: center;
+}
+.trued6 .border .label, .trued6 .chat-item-description .label {
+  display: grid;
+  color: #191813;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  background: #c0c0c0;
+  border-radius: 0;
+}
+.trued6 .border .label.top-left, .trued6 .chat-item-description .label.top-left, .trued6 .border .label.grid:first-child, .trued6 .chat-item-description .label.grid:first-child,
+.trued6 .border .label.grid-2col:first-child,
+.trued6 .chat-item-description .label.grid-2col:first-child {
+  border-top-left-radius: 10px;
+}
+.trued6 .border .label.top-right, .trued6 .chat-item-description .label.top-right {
+  border-top-right-radius: 10px;
+}
+.trued6 .border .label.bottom-left, .trued6 .chat-item-description .label.bottom-left {
+  border-bottom-left-radius: 10px;
+}
+.trued6 .border .label.bottom-right, .trued6 .chat-item-description .label.bottom-right {
+  border-bottom-right-radius: 10px;
+}
+.trued6 .border .input, .trued6 .border .list-button, .trued6 .border .chat-item-description .list-button, .trued6 .chat-item-description .border .list-button, .trued6 .border .list-item, .trued6 .border .chat-item-description .list-item, .trued6 .chat-item-description .border .list-item, .trued6 .chat-item-description .input, .trued6 .chat-item-description .list-button, .trued6 .chat-item-description .list-item {
+  display: grid;
+  align-items: center;
+  padding: 2px 10px;
+}
+.trued6 .border .input input, .trued6 .border .list-button input, .trued6 .border .chat-item-description .list-button input, .trued6 .chat-item-description .border .list-button input, .trued6 .border .list-item input, .trued6 .border .chat-item-description .list-item input, .trued6 .chat-item-description .border .list-item input, .trued6 .chat-item-description .input input, .trued6 .chat-item-description .list-button input, .trued6 .chat-item-description .list-item input {
+  border: 0;
+  background: 0;
+  height: auto;
+}
+.trued6 .border .input input.top, .trued6 .border .list-button input.top, .trued6 .border .list-item input.top, .trued6 .chat-item-description .input input.top, .trued6 .chat-item-description .list-button input.top, .trued6 .chat-item-description .list-item input.top {
+  font-size: 3em;
+}
+.trued6 .border .input.no-padding, .trued6 .border .no-padding.list-button, .trued6 .border .no-padding.list-item, .trued6 .chat-item-description .input.no-padding, .trued6 .chat-item-description .no-padding.list-button, .trued6 .chat-item-description .no-padding.list-item {
+  padding: 0;
+}
+.trued6 .border .list-item, .trued6 .chat-item-description .list-item {
+  display: flex;
+}
+.trued6 .border .list-item label, .trued6 .chat-item-description .list-item label {
+  flex: 5;
+}
+.trued6 .border .list-button, .trued6 .chat-item-description .list-button {
+  padding: 5px;
+  justify-content: center;
+}
+.trued6 .padding2by5, .trued6 .border .list-item, .trued6 .chat-item-description .list-item {
+  padding: 2px 5px;
+}
+.trued6 .sheet-tabs {
+  flex: 0;
+}
+.trued6 .sheet-body,
+.trued6 .sheet-body .tab,
+.trued6 .sheet-body .tab .editor {
+  height: 99%;
+}
+.trued6 .tox {
+  min-height: 200px;
+}
+.trued6 .tox .tox-editor-container {
+  background: #fff;
+}
+.trued6 .tox .tox-edit-area {
+  padding: 0 8px;
+}
+.trued6 .separator-line, .trued6 .dice-roll .dice-tooltip, .trued6 .dice-roll .dice-flavor {
+  border-bottom: 2px solid #000;
+  width: 100%;
+}
+.trued6 .separator-line:last-child, .trued6 .dice-roll .dice-tooltip:last-child, .trued6 .dice-roll .dice-flavor:last-child {
+  border: 0;
+}
+.trued6 .big0-75, .trued6 .dice-roll .dice-total label {
+  font-size: 0.75em;
+}
+.trued6 .big1 {
+  font-size: 1em;
+}
+.trued6 .big1-5 {
+  font-size: 1.5em;
+}
+.trued6 .big2, .trued6 .dice-roll .dice-total, .trued6 .dice-roll .dice-flavor, .trued6 .description-border label {
+  font-size: 2em;
+}
+.trued6 .big3, .trued6 .border .label.big, .trued6 .chat-item-description .label.big {
+  font-size: 3em;
+}
+.trued6 .description-border {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.trued6 .description-border label {
+  display: flex;
+  color: #191813;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  background: #c0c0c0;
+  border-radius: 0;
+  justify-content: center;
+  border-radius: 10px 10px 0 0;
+}
+.trued6 .description-border div.box {
+  padding: 0px 5px 5px 5px;
+  min-height: 200px;
+}
+.trued6 .description-border div.box .editor {
+  min-height: 200px;
+}
+.trued6 .resource-label {
+  font-weight: bold;
+}
+.trued6 .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.trued6 .items-header > * {
+  font-size: 14px;
+  text-align: center;
+}
+.trued6 .items-header .item-name {
+  font-weight: bold;
+  padding-left: 5px;
+  text-align: left;
+  display: flex;
+}
+.trued6 .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  color: #444;
+}
+.trued6 .items-list .item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.trued6 .items-list .item-name {
+  flex: 2;
+  margin: 0;
+  overflow: hidden;
+  font-size: 13px;
+  text-align: left;
+  align-items: center;
+  display: flex;
+}
+.trued6 .items-list .item-name h3, .trued6 .items-list .item-name h4 {
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.trued6 .items-list .item-controls {
+  display: flex;
+  flex: 0 0 100px;
+  justify-content: flex-end;
+}
+.trued6 .items-list .item-controls a {
+  font-size: 12px;
+  text-align: center;
+  margin: 0 6px;
+}
+.trued6 .items-list .item {
+  align-items: center;
+  padding: 0 2px;
+  border-bottom: 1px solid #c9c7b8;
+}
+.trued6 .items-list .item:last-child {
+  border-bottom: none;
+}
+.trued6 .items-list .item .item-name {
+  color: #191813;
+}
+.trued6 .items-list .item .item-name .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+.trued6 .items-list .item-prop {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.trued6 .items-list .items-header {
+  height: 28px;
+  margin: 2px 0;
+  padding: 0;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.05);
+  border: 2px groove #eeede0;
+  font-weight: bold;
+}
+.trued6 .items-list .items-header > * {
+  font-size: 12px;
+  text-align: center;
+}
+.trued6 .items-list .items-header .item-name {
+  padding-left: 5px;
+  text-align: left;
+}
+.trued6 .item-formula {
+  flex: 0 0 200px;
+  padding: 0 8px;
+}
+.trued6 .item-sheet .profile-img {
+  width: 90px;
+}
+.trued6 .effects .item .effect-source,
+.trued6 .effects .item .effect-duration,
+.trued6 .effects .item .effect-controls {
+  text-align: center;
+  border-left: 1px solid #c9c7b8;
+  border-right: 1px solid #c9c7b8;
+  font-size: 12px;
+}
+.trued6 .effects .item .effect-controls {
+  border: none;
+}
+.trued6 .actor {
+  min-width: 600px;
+}
+.trued6 .player .equipments .item-controls {
+  flex: 0 0 125px;
+}
+.trued6 .dice-roll .dice-total, .trued6 .dice-roll .dice-flavor {
+  color: #191813;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  background: #c0c0c0;
+  border-radius: 0;
+}
+.trued6 .dice-roll {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.trued6 .dice-roll .dice-flavor {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.trued6 .dice-roll .dice-tooltip {
+  padding: 5px;
+}
+.trued6 .dice-roll .dice-tooltip .part-total {
+  display: none;
+}
+.trued6 .dice-roll .dice-total {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0px;
+}
+.trued6 .dice-roll .dice-total.failure {
+  color: red;
+}
+.trued6 .dice-roll .dice-total.success {
+  color: green;
+}
+.trued6 .dice-roll .dice-total label.failure {
+  color: red;
+}
+.trued6 .dice-roll .dice-total label.success {
+  color: green;
+}
+.trued6 .chat-reroll {
+  margin-top: 10px;
+}/*# sourceMappingURL=trued6.css.map */

@@ -1,0 +1,65 @@
+%label-with-background {
+  @extend .big2;
+  color: $c-dark;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+
+  background: $c-gray-background;
+  border-radius: 0;
+
+}
+
+.dice-roll {
+  border: 2px solid $c-black;
+  border-radius: 10px;
+
+  .dice-flavor {
+    @extend .separator-line;
+    @extend %label-with-background;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .dice-tooltip {
+    @extend .separator-line;
+    @extend .align-center;
+    padding: 5px;
+
+    .part-total {
+      display: none;
+    }
+  }
+
+  .dice-total {
+    @extend %label-with-background;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 0px;
+
+    &.failure {
+      color: $c-failure;
+    }
+
+    &.success {
+      color: $c-success;
+    }
+
+    label {
+      @extend .big0-75;
+
+      &.failure {
+        color: $c-failure;
+      }
+
+      &.success {
+        color: $c-success;
+      }
+    }
+  }
+}
+
+.chat-reroll{
+  margin-top: 10px;
+}

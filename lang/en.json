@@ -1,0 +1,150 @@
+{
+  "TRUED6": {
+    "Main": "Main",
+    "none": "None",
+    "Characteristics": "Characteristics",
+    "Rest": "Rest",
+    "LongRest": "Long Rest",
+    "ShortRest": "Short Rest",
+    "RecoverSkill": "Recover Skill",
+    "Price": "Price",
+    "Attributes": {
+      "Str": {
+        "long": "Strength",
+        "abbr": "str",
+        "explanation": "melee attacks, athletics, break, overwhelm, lift, push",
+        "order": "1"
+      },
+      "Dex": {
+        "long": "Dexterity",
+        "abbr": "dex",
+        "explanation": "ranged attacks, acrobatics, coordination, handiness",
+        "order": "2"
+      },
+      "Con": {
+        "long": "Constitution",
+        "abbr": "con",
+        "explanation": "resistance, metabolism, endurance, stamina, health",
+        "order": "3"
+      },
+      "Int": {
+        "long": "Intelligence",
+        "abbr": "int",
+        "explanation": "arcane magic, logic, education, investigation, tracking",
+        "order": "4"
+      },
+      "Wis": {
+        "long": "Wisdom",
+        "abbr": "wis",
+        "explanation": "divine magic, religion, empathy, intuition, discernment",
+        "order": "5"
+      },
+      "Cha": {
+        "long": "Charisma",
+        "abbr": "cha",
+        "explanation": "ascendant, elocution, arts, passion, nerve, leadership",
+        "order": "6"
+      }
+    },
+    "SheetLabels": {
+      "Actor": "Trued6 Actor Sheet",
+      "Item": "Trued6 Item Sheet"
+    },
+    "Effect": {
+      "Source": "Source",
+      "Toggle": "Toggle Effect",
+      "Temporary": "Temporary Effects",
+      "Passive": "Passive Effects",
+      "Inactive": "Inactive Effects"
+    },
+    "HP": {
+      "HP": "HP",
+      "MaxHP": "Max HP",
+      "CurrentHP": "Current HP",
+      "HPFormula": "HP Formula"
+    },
+    "Attacks": {
+      "Melee": "Melee",
+      "Ranged": "Ranged",
+      "Defense": "Defense",
+      "DefenseWithShield": "Defense with Shield",
+      "Number": "Number",
+      "Target": "Target",
+      "Special": "Special",
+      "": ""
+    },
+    "DiceRoll": {
+      "Attack": "Attack",
+      "Attribute": "Attribute",
+      "Success": "Success",
+      "CriticalSuccess": "Critical Success",
+      "Failure": "Failure",
+      "Damage": "Damage",
+      "Avoid": "Avoid",
+      "All": "ALL",
+      "Reroll": "Reroll",
+      "DiscardedByAdvantage": "Discarded by Advantage",
+      "DiscardedByDisadvantage": "Discarded by Disadvantage",
+      "RollStyle": {
+        "Label": "Roll Style",
+        "Normal": "Normal",
+        "Advantage": "Advantage",
+        "Disadvantage": "Disadvantage"
+      },
+      "RollFormula": "Roll Formula"
+    },
+    "Player": {
+      "Class": "Classes/levels",
+      "Level": "Total Level",
+      "Race": "Race/bonus",
+      "Coins": "Coins"
+    },
+    "Equipment": {
+      "Type": "Type",
+      "None": "None",
+      "Weapon": "Weapon",
+      "Armour": "Armour",
+      "Shield": "Shield",
+      "AttackType": "Attack Type",
+      "DmgBonus": "Dmg Bonus",
+      "Defense": "Defense",
+      "": "",
+      "Equipped": "Equipped Equipments",
+      "Unequipped": "Unequipped Equipments"
+    },
+    "Skill": {
+      "Skill": "Skill",
+      "UsageType": {
+        "label": "Usage Type",
+        "passive": "Passive",
+        "rest": "Once Per Rest",
+        "fail": "Until Fail"
+      },
+      "Attribute": "Attribute",
+      "Used": "Exhausted",
+      "Spell": "Spell",
+      "RollResult": "Roll Result",
+      "Feature": "Feature",
+      "Special": "Special"
+    },
+    "StatusEffects": {
+      "Blocked": "Blocked",
+      "Cover": "Cover",
+      "Flanked": "Flanked",
+      "Petrified": "Petrified",
+      "Sickened": "Sickened",
+      "Surprised": "Surprised"
+    }
+  },
+  "TYPES": {
+    "Actor": {
+      "player": "Player",
+      "npc": "NPC"
+    },
+    "Item": {
+      "inventoryItem": "Inventory Item",
+      "equipment": "Equipment",
+      "skill": "Skill"
+    }
+  }
+}

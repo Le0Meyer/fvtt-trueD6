@@ -1,0 +1,22 @@
+body,
+button,
+#tooltip {
+  font-family: $font-headers;
+  font-size: $font-normal-size;
+}
+
+.rollable {
+
+  &:hover,
+  &:focus {
+    color: #000;
+    text-shadow: 0 0 10px $c-rollable;
+    cursor: pointer;
+    &.advantage{
+      text-shadow: 0 0 10px $c-success;
+    }
+    &.disadvantage{
+      text-shadow: 0 0 10px $c-failure;
+    }
+  }
+}

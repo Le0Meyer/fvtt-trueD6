@@ -1,0 +1,111 @@
+<form class="{{cssClass}} item-sheet" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <div class="header-fields">
+      <div class="border grid-12col">
+        <div class="input grid-span-12  separator-line big1">
+          <label>{{localize "TYPES.Item.skill"}}</label>
+        </div>
+        <div class="input grid-span-12  separator-line big3">
+          <input name="name" type="text" value="{{item.name}}" placeholder="Name" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize "Description"}}</a>
+    <a class="item" data-tab="effects">{{localize "EFFECT.TabEffects"}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab active" data-group="primary" data-tab="description">
+      <div class="grid">
+        <div>
+          <div class="border">
+            <div class="label top-left top-right big2" class="flexrow">
+              <label>{{localize "TRUED6.Characteristics"}}</label>
+            </div>
+            <div class="flexrow align-center">
+              <label class="label big1-5">{{localize "TRUED6.Skill.Attribute"}}</label>
+              <div>
+                <select name="system.attribute">
+                  {{#select item.system.attribute}}
+                  <option value="">{{localize "TRUED6.none"}}</option>
+                  <option value="str">{{localize "TRUED6.Attributes.Str.long"}}</option>
+                  <option value="dex">{{localize "TRUED6.Attributes.Dex.long"}}</option>
+                  <option value="con">{{localize "TRUED6.Attributes.Con.long"}}</option>
+                  <option value="int">{{localize "TRUED6.Attributes.Int.long"}}</option>
+                  <option value="wis">{{localize "TRUED6.Attributes.Wis.long"}}</option>
+                  <option value="cha">{{localize "TRUED6.Attributes.Cha.long"}}</option>
+                  {{/select}}
+                </select>
+              </div>
+            </div>
+            <div class="flexrow align-center">
+              <label class="label big1-5">{{localize "TRUED6.Skill.UsageType.label"}}</label>
+              <div>
+                <select name="system.usageType">
+                  {{#select item.system.usageType}}
+                  <option value="passive">{{localize "TRUED6.Skill.UsageType.passive"}}</option>
+                  <option value="rest">{{localize "TRUED6.Skill.UsageType.rest"}}</option>
+                  <option value="fail">{{localize "TRUED6.Skill.UsageType.fail"}}</option>
+                  {{/select}}
+                </select>
+              </div>
+            </div>
+            <div class="flexrow align-center">
+              <label class="label big1-5">{{localize "TRUED6.Skill.Spell"}}</label>
+              <div>
+                <input type="checkbox" name="system.isSpell" {{checked item.system.isSpell}}>
+              </div>
+            </div>
+            <div class="flexrow align-center">
+              <label class="label big1-5">{{localize "TRUED6.DiceRoll.Attack"}}</label>
+              <div>
+                <input type="checkbox" name="system.isAttack" {{checked item.system.isAttack}}>
+              </div>
+            </div>
+            <div class="flexrow align-center">
+              <label class="label big1-5">{{localize "TRUED6.DiceRoll.RollFormula"}}</label>
+              <div>
+                <input type="text" name="system.formula" value="{{item.system.formula}}" />
+              </div>
+            </div>
+            <div class="flexrow align-center">
+              <label class="label big1-5 bottom-left">{{localize "TRUED6.DiceRoll.RollStyle.Label"}}</label>
+              <div>
+                <select name="system.rollStyle">
+                  {{#select item.system.rollStyle}}
+                  <option value="0">{{localize "TRUED6.DiceRoll.RollStyle.Normal"}}</option>
+                  <option value="1">{{localize "TRUED6.DiceRoll.RollStyle.Advantage"}}</option>
+                  <option value="-1">{{localize "TRUED6.DiceRoll.RollStyle.Disadvantage"}}</option>
+                  {{/select}}
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description-border">
+          <label>{{localize "Description"}}</label>
+          <div class="box">
+            {{editor system.description target="system.description" rollData=rollData button=true owner=owner
+            editable=editable}}
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    {{!-- Effects Tab --}}
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      {{> "systems/trued6/templates/item/parts/item-effects.hbs"}}
+    </div>
+  </section>
+
+</form>
